@@ -122,7 +122,7 @@ case $opt in
 3) clear ; menul ;;
 4) clear ; menut ;;
 5) clear ; menus ;;
-6) clear ; add-host ;;
+6) clear ; addhost ;;
 7) clear ; running ;;
 8) clear ; genssl ;;
 9) clear ; restart ;;
