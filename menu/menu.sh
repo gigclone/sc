@@ -107,15 +107,15 @@ echo -e "                                 MENU                         "
 echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e ""
 echo -e " ${CYAN}[01]${NC} • [SSH MENU${NC}]   ${CYAN}[07]${NC} • [RUNNING${NC}]"
-echo -e " ${CYAN}[02]${NC} • [VMESS${NC}]   ${CYAN}[08]${NC} • [GEN-CERT${NC}] "
-echo -e " ${CYAN}[03]${NC} • [VLESS${NC}]   ${CYAN}[09]${NC} • [RESTART SERVICE${NC}]"
-echo -e " ${CYAN}[04]${NC} • [TROJAN${NC}]  ${CYAN}[10]${NC} • [CLEARLOG${NC}]"
-echo -e " ${CYAN}[05]${NC} • [SSWS ${NC}]     ${CYAN}[11]${NC} • [REBOOT${NC}]"
+echo -e " ${CYAN}[02]${NC} • [VMESS${NC}]      ${CYAN}[08]${NC} • [GEN-CERT${NC}] "
+echo -e " ${CYAN}[03]${NC} • [VLESS${NC}]      ${CYAN}[09]${NC} • [RESTART SERVICE${NC}]"
+echo -e " ${CYAN}[04]${NC} • [TROJAN${NC}]     ${CYAN}[10]${NC} • [CLEARLOG${NC}]"
+echo -e " ${CYAN}[05]${NC} • [SSWS ${NC}]      ${CYAN}[11]${NC} • [REBOOT${NC}]"
 echo -e " ${CYAN}[06]${NC} • [ADD-HOST${NC}]"
 echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
 echo -e " [X]${NC} • [PRESS X TO EXIT]"
 echo -e ""
-echo -p " Select menu : "; read opt
+echo -e " Select menu : "; read opt
 case $opt in
 1) clear ; menussh ;;
 2) clear ; menuv ;;
