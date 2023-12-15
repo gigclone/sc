@@ -31,6 +31,7 @@ wget -q -O runing "https://raw.githubusercontent.com/gigclone/sc/main/runing.sh"
 wget -q -O clearlog "https://raw.githubusercontent.com/gigclone/sc/main/clearlog.sh"
 wget -q -O genssl "https://raw.githubusercontent.com/gigclone/sc/main/genssl.sh"
 wget -q -O addhost "https://raw.githubusercontent.com/gigclone/sc/main/addhost.sh"
+wget -q -O trial "https://raw.githubusercontent.com/gigclone/sc/main/trialssh.sh"
 
 
 chmod +x menu
@@ -61,4 +62,5 @@ chmod +x runing
 chmod +x clearlog
 chmod +x genssl
 chmod +x addhost
+chmod +x trialssh
 
