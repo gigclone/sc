@@ -62,5 +62,5 @@ chmod +x runing
 chmod +x clearlog
 chmod +x genssl
 chmod +x addhost
-chmod +x trialssh
+chmod +x trial
 
