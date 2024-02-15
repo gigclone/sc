@@ -129,7 +129,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green      Install Xray              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-wget -q -O ins-xray.sh https://raw.githubusercontent.com/gigclone/newsc/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q -O ins-xray.sh https://raw.githubusercontent.com/gigclone/sc/main/ins-xrayy.sh && chmod +x ins-xrayy.sh && ./ins-xrayy.sh
 sleep 1
 #wget -q -O senmenu.sh https://raw.githubusercontent.com/gigclone/asu/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
