@@ -1,5 +1,6 @@
 #!/bin/bash
 # // script credit by CyberVPN
+# // Moded By Boss Muda
 # // ini adalah script autoinstall ssh multiport untuk instalasi vpn server dan tunneling service
 MYIP=$(curl -sS ipv4.icanhazip.com)
 red='\e[1;31m'
@@ -40,8 +41,8 @@ echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
 sudo at install squid -y
 sudo apt install net-tools -y
 sudo apt install vnstat -y
-wget -q https://raw.githubusercontent.com/gigclone/sc/main/tools.sh && chmod +x tools.sh && ./tools.sh
-rm tools.sh
+wget -q https://raw.githubusercontent.com/gigclone/sc/main/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
+rm dependencies.sh
 clear
 # izin
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -49,7 +50,7 @@ echo "memeriksa vps anda"
 sleep 0.5
 CEKEXPIRED () {
         today=$(date -d +1day +%Y -%m -%d)
-        Exp1=$(curl -sS https://raw.githubusercontent.com/gigclone/sc/main/izin | grep $MYIP | awk '{print $3}')
+        Exp1=$(curl -sS https://raw.githubusercontent.com/gigclone/permission/main/A1valid/ip | grep $MYIP | awk '{print $3}')
         if [[ $today < $Exp1 ]]; then
         echo "status script aktif.."
         else
@@ -57,7 +58,7 @@ CEKEXPIRED () {
         exit 0
 fi
 }
-IZIN=$(curl -sS https://raw.githubusercontent.com/gigclone/sc/main/izin | awk '{print $4}' | grep $MYIP)
+IZIN=$(curl -sS https://raw.githubusercontent.com/gigclone/permission/main/A1valid/ip | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo "IZIN DI TERIMA!!"
 CEKEXPIRED
@@ -93,8 +94,10 @@ clear
 wget https://raw.githubusercontent.com/gigclone/sc/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 sleep 2
 clear
-wget https://raw.githubusercontent.com/gigclone/sc/main/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
+#wget https://raw.githubusercontent.com/gigclone/asu/main/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
 
+#wget https://raw.githubusercontent.com/gigclone/asu/main/ssh/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+clear
 
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -102,14 +105,16 @@ echo -e "$green      Install Websocket              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/gigclone/sc/main/Insshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-
+wget https://raw.githubusercontent.com/amirulckck/test/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+clear 1
+#wget https://raw.githubusercontent.com/amirulckck/test/main/ipsec/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh
+clear 1
 #exp
 cd /usr/bin
-wget -O xp "https://raw.githubusercontent.com/gigclone/sc/main/xp.sh"
+wget -O xp "https://raw.githubusercontent.com/gigclone/asu/main/xp.sh"
 chmod +x xp
 sleep 1
-wget -q -O /usr/bin/notramcpu "https://raw.githubusercontent.com/gigclone/sc/main/notramcpu" && chmod +x /usr/bin/notramcpu
+#wget -q -O /usr/bin/notramcpu "https://raw.githubusercontent.com/gigclone/asu/main/notramcpu" && chmod +x /usr/bin/notramcpu
 
 cd
 #remove log 
@@ -124,14 +129,16 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green      Install Xray              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-wget -q -O ins-xray.sh https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q -O ins-xray.sh https://raw.githubusercontent.com/gigclone/sc/main/ins-xrayy.sh && chmod +x ins-xrayy.sh && ./ins-xrayy.sh
 sleep 1
-wget -q -O senmenu.sh https://raw.githubusercontent.com/gigclone/sc/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
+#wget -q -O senmenu.sh https://raw.githubusercontent.com/gigclone/asu/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install slowdns              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 wget -q -O slowdns.sh https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+sleep 2
+wget -q -O udp.sh https://raw.githubusercontent.com/gigclone/asu/main/udp/udp.sh && chmod +x udp.sh && ./udp.sh
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install openvpn              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -203,6 +210,7 @@ echo "   - Trojan WS               : 443" | tee -a log-install.txt
 echo "   - Trojan GO               : 443" | tee -a log-install.txt
 echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
 echo "   - slowdns                 : 443,80,8080,53,5300" | tee -a log-install.txt
+echo "   - Udp Custom              : 1-65535"           |  tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
@@ -224,7 +232,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Credit By BOS MUDA ]-==============="
+echo "===============-[ Script Mod By Boss Muda ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
@@ -236,4 +244,3 @@ if [ "$answer" == "${answer#[Yy]}" ] ;then
 exit 0
 else
 reboot
-fi
